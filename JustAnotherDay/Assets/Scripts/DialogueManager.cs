@@ -2,27 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI textDisplay;
-    public string[] Dialogues;
-    private int Index;
+    public GameObject Canves;
+    public Person person;
+    public TextMeshProUGUI NameTextDisplay;
+    public TextMeshProUGUI TextDisplay;
     public float TypingSpeed;
-    public bool Continue;
 
-    public bool Active = false;
+    private string Name;
+    private string[] Dialogue;
+    private int Index;
+    private bool Continue = false;
+    private bool Active = false;
 
-
-    //Activate on Closure
-    void OnTriggerStay(Collider col)
+    private void Start()
     {
-        if (col.gameObject.CompareTag("Player"))
+        Canves.SetActive(false);
+        Name = person.Name;
+        Dialogue = person.Sentences;
+        NameTextDisplay.text = Name;
+        TextDisplay.text = "";
+    }
+    //Activate on Closure
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Return))
             {
                 if (Active == false)
                 {
+                    Canves.SetActive(true);
                     Active = true;
                     StartCoroutine(Type());
                 }
@@ -37,7 +50,7 @@ public class DialogueManager : MonoBehaviour
     //Enabling Con Button
     void Update()
     {
-        if (textDisplay.text == Dialogues[Index])
+        if (TextDisplay.text == Dialogue[Index])
         {
             Continue = true;
         }
@@ -46,11 +59,12 @@ public class DialogueManager : MonoBehaviour
     //Main Typing Fuction
     IEnumerator Type()
     {
-        foreach (char letter in Dialogues[Index].ToCharArray())
+        foreach (char letter in Dialogue[Index].ToCharArray())
         {
-            textDisplay.text += letter;
+            TextDisplay.text += letter;
             yield return new WaitForSeconds(TypingSpeed);
         }
+
     }
     //Continue Button Function
 
@@ -58,22 +72,17 @@ public class DialogueManager : MonoBehaviour
     {
         if (Continue == true)
         {
-            if (Index < Dialogues.Length - 1)
+            if (Index < Dialogue.Length - 1)
             {
                 Index++;
-                textDisplay.text = "";
+                TextDisplay.text = "";
                 StartCoroutine(Type());
                 Continue = false;
 
             }
-
-
             else
             {
-                textDisplay.text = "";
                 Continue = false;
-                Active = false;
-                Index = 0;
 
             }
         }

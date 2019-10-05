@@ -9,21 +9,21 @@ public class PlayerMovement : MonoBehaviour
     SpriteRenderer PlayerSpriteRenderer;
 
     // Directions 
-    int up = 0;
-    int Down = 1;
-    int Right = 2;
-    int Left = 3;
+    int Idle = 0;
+    int up = 1;
+    int Down = 2;
+    int Right = 3;
+    int Left = 4;
 
     public float Speed = 5.0f;
-    // Start is called before the first frame update
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
 
     }
 
-    // Update is called once per frame
     void Update()
     {
     }
@@ -32,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // Move Up
         {
             // Player Animation 
-            //animator.SetInteger("",up);
 
             // Movement
             body.MovePosition(transform.position + transform.up * Time.fixedDeltaTime * Speed);
@@ -40,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) // Move DOWN
         {
             // Player Animation 
-            //animator.SetInteger("", Down);
+            animator.SetInteger("AnimationState", Down);
 
             // Movement
             body.MovePosition(transform.position - transform.up * Time.fixedDeltaTime * Speed);
@@ -60,6 +59,10 @@ public class PlayerMovement : MonoBehaviour
 
             // Movement
             body.MovePosition(transform.position - transform.right * Time.fixedDeltaTime * Speed);
+        }
+        else
+        {
+            animator.SetInteger("AnimationState", Idle);
         }
     }
 }
