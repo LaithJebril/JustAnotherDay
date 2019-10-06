@@ -36,6 +36,10 @@ public class OldMan : MonoBehaviour
                     Vector3 OffSet = new Vector3(transform.position.x - XOffSet, transform.position.y, transform.position.z);
                     Player.Move_Right(OffSet);
                 }
+                else
+                {
+                    this.SendMessage("EndTask");
+                }
             }
             else
             {
@@ -47,7 +51,6 @@ public class OldMan : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            TextDisplay.text = Massege;
             Nearby = true;
         }
     }
@@ -61,5 +64,7 @@ public class OldMan : MonoBehaviour
     public void EndDialogue()
     {
         StartTask = true;
+        TextDisplay.text = Massege;
+
     }
 }
