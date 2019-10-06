@@ -32,19 +32,22 @@ public class DialogueManager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.Return)||(Input.GetKeyDown(KeyCode.Space)))
+            Canves.SetActive(true);
+            if (Active == false)
             {
-                if (Active == false)
-                {
-                    Canves.SetActive(true);
-                    Active = true;
-                    StartCoroutine(Type());
-                }
-                if (Active)
-                {
-                    NextSentence();
-                }
+                Active = true;
+                StartCoroutine(Type());
             }
+            if (Input.GetKeyDown(KeyCode.Return) || (Input.GetKeyDown(KeyCode.Space)))
+            {
+            }
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Canves.SetActive(false);
         }
     }
     //Enabling Con Button
@@ -64,6 +67,11 @@ public class DialogueManager : MonoBehaviour
             TextDisplay.text += letter;
             yield return new WaitForSeconds(TypingSpeed);
         }
+        if (TextDisplay.text == Dialogue[Index])
+        {
+            yield return new WaitForSeconds(1);
+            NextSentence();
+        }
     }
 
     //Continue Button Function
@@ -82,7 +90,8 @@ public class DialogueManager : MonoBehaviour
             else
             {
                 Continue = false;
-
+                Canves.SetActive(false);
+                this.SendMessage("EndDialogue");
             }
         }
     }

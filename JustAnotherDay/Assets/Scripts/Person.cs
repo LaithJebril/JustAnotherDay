@@ -6,4 +6,5 @@ public class Person : ScriptableObject
 {
     public string Name;
     public string[] Sentences;
+
 }

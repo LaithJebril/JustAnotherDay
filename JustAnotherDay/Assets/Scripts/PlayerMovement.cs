@@ -47,23 +47,31 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Move RIGHT
         {
-            // Player Animation 
-            animator.SetInteger("AnimationState", Right);
-
-            // Movement
-            body.MovePosition(transform.position + transform.right * Time.fixedDeltaTime * Speed);
+            Move_Right(transform.position);
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // Move LEFT
         {
-            // Player Animation 
-            animator.SetInteger("AnimationState", Left);
-
-            // Movement
-            body.MovePosition(transform.position - transform.right * Time.fixedDeltaTime * Speed);
+            Move_Left(transform.position);
         }
         else
         {
             animator.SetInteger("AnimationState", Idle);
         }
+    }
+    public void Move_Left(Vector3 StartPos)
+    {
+        // Player Animation 
+        animator.SetInteger("AnimationState", Left);
+
+        // Movement
+        body.MovePosition(StartPos - transform.right * Time.fixedDeltaTime * Speed);
+    }
+    public void Move_Right(Vector3 StartPos)
+    {
+        // Player Animation 
+        animator.SetInteger("AnimationState", Right);
+
+        // Movement
+        body.MovePosition(StartPos + transform.right * Time.fixedDeltaTime * Speed);
     }
 }
