@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // Move Up
         {
             // Player Animation 
+            animator.SetInteger("AnimationState", up);
 
             // Movement
             body.MovePosition(transform.position + transform.up * Time.fixedDeltaTime * Speed);
@@ -47,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) // Move RIGHT
         {
             // Player Animation 
-            //animator.SetInteger("", Right);
+            animator.SetInteger("AnimationState", Right);
 
             // Movement
             body.MovePosition(transform.position + transform.right * Time.fixedDeltaTime * Speed);
@@ -55,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) // Move LEFT
         {
             // Player Animation 
-            //animator.SetInteger("", Left);
+            animator.SetInteger("AnimationState", Left);
 
             // Movement
             body.MovePosition(transform.position - transform.right * Time.fixedDeltaTime * Speed);

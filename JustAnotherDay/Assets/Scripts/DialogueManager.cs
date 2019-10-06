@@ -26,12 +26,13 @@ public class DialogueManager : MonoBehaviour
         NameTextDisplay.text = Name;
         TextDisplay.text = "";
     }
+
     //Activate on Closure
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Return)||(Input.GetKeyDown(KeyCode.Space)))
             {
                 if (Active == false)
                 {
@@ -46,7 +47,6 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
-
     //Enabling Con Button
     void Update()
     {
@@ -64,10 +64,9 @@ public class DialogueManager : MonoBehaviour
             TextDisplay.text += letter;
             yield return new WaitForSeconds(TypingSpeed);
         }
-
     }
-    //Continue Button Function
 
+    //Continue Button Function
     public void NextSentence()
     {
         if (Continue == true)
