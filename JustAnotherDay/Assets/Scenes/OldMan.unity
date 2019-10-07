@@ -350,7 +350,7 @@ MonoBehaviour:
   person: {fileID: 11400000, guid: 11628e62d5030ea4ab368dca1c9ed6e2, type: 2}
   NameTextDisplay: {fileID: 1267430772}
   TextDisplay: {fileID: 466604753}
-  TypingSpeed: 0.4
+  TypingSpeed: 0.1
   EndTaskSentence: Thank you son
 --- !u!212 &938812422
 SpriteRenderer:
@@ -923,27 +923,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8135561965841520807, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3427114271967980436, guid: 6c7f88c9162ca9f429be931099e7afde,
-        type: 3}
-    - target: {fileID: 8135561965841520807, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8135561965841520807, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8135561965841520804, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
-        type: 3}
-      propertyPath: Speed
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22ac08d62f1088c439d6d6c2e18eaa86, type: 3}
