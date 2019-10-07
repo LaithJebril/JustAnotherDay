@@ -325,6 +325,87 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 26603942}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &104978325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3360948856661961411, guid: cb09d442d24cea94980fbf27087a64db,
+    type: 3}
+  m_PrefabInstance: {fileID: 172525584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a7a00701951ff4ea36833eb78a1fae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &172525584
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3360948856661961420, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_Name
+      value: NextScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 39.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cb09d442d24cea94980fbf27087a64db, type: 3}
 --- !u!114 &223767094 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7649452313937315530, guid: df00f333b92ce704499ccc873650ff97,
@@ -2864,6 +2945,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canves: {fileID: 26603946}
+  Hearts: {fileID: 0}
   Exclamation: {fileID: 686950441}
   person: {fileID: 11400000, guid: 177891fdb6727b54893d773be07ad8b0, type: 2}
   NameTextDisplay: {fileID: 26603945}
@@ -2898,6 +2980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 487994095fedac6488fef9ae617951b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: {fileID: 104978325}
   TextDisplay: {fileID: 223767094}
   Massege: 'Keep tapping "Space" to lift the door '
   Speed: 0.1

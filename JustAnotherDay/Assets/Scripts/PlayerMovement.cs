@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     int Left = 4;
 
     public float Speed = 5.0f;
+    public float max_x;
+    public float max_y;
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -max_x, max_x), Mathf.Clamp(transform.position.y, -max_y, max_y));
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) // Move Up
         {
             // Player Animation 

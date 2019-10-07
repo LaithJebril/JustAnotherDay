@@ -6,6 +6,7 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject Canves;
+    //public ParticleSystem Hearts;
     public GameObject Exclamation;
     public Person person;
     public TextMeshProUGUI NameTextDisplay;
@@ -105,5 +106,6 @@ public class DialogueManager : MonoBehaviour
     public void EndTask()
     {
         TextDisplay.text = EndTaskSentence;
+        //Hearts.Play();
     }
 }

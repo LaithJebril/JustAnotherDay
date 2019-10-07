@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 1
+  max_x: 5.87
+  max_y: 3.38
 --- !u!50 &8135561965841520803
 Rigidbody2D:
   serializedVersion: 4
@@ -167,4 +169,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 552c9acaa259a1e4f80909945dc8b5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerSP: []

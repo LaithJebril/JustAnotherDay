@@ -5,6 +5,7 @@ using TMPro;
 
 public class Worker : MonoBehaviour
 {
+    public NextScene nextScene;
     public TextMeshProUGUI TextDisplay;
     [TextArea(2, 5)]
     public string Massege;
@@ -78,6 +79,7 @@ public class Worker : MonoBehaviour
         if (PowerGiven > PowerNeeded)
         {
             this.SendMessage("EndTask");
+            nextScene.CanGoNextScene = true;
         }
     }
     void WorkerAnimation()
