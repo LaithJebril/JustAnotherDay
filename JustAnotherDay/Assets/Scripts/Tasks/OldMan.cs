@@ -5,6 +5,7 @@ using TMPro;
 
 public class OldMan : MonoBehaviour
 {
+    public NextScene nextScene;
     public TextMeshProUGUI TextDisplay;
     [TextArea(2,5)]
     public string Massege;
@@ -39,6 +40,7 @@ public class OldMan : MonoBehaviour
                 else
                 {
                     this.SendMessage("EndTask");
+                    nextScene.CanGoNextScene = true;
                 }
             }
             else
