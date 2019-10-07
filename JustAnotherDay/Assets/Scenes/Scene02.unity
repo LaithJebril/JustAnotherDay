@@ -1212,11 +1212,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NextScene
       objectReference: {fileID: 0}
-    - target: {fileID: 3360948856661961411, guid: cb09d442d24cea94980fbf27087a64db,
-        type: 3}
-      propertyPath: Hearts
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3360948856661961409, guid: cb09d442d24cea94980fbf27087a64db,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1271,6 +1266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360948856661961411, guid: cb09d442d24cea94980fbf27087a64db,
+        type: 3}
+      propertyPath: Hearts
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb09d442d24cea94980fbf27087a64db, type: 3}
@@ -3124,7 +3124,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canves: {fileID: 1816571711}
-  Hearts: {fileID: 0}
   Exclamation: {fileID: 507657228}
   person: {fileID: 11400000, guid: 11628e62d5030ea4ab368dca1c9ed6e2, type: 2}
   NameTextDisplay: {fileID: 1816571710}
@@ -3548,12 +3547,12 @@ PrefabInstance:
     - target: {fileID: 8135561965841520806, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.43
+      value: 0.222
       objectReference: {fileID: 0}
     - target: {fileID: 8135561965841520806, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.68
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 8135561965841520806, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
         type: 3}

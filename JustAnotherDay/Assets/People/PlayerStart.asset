@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d5d55c35dbda024eaec0b1e666232b3, type: 3}
-  m_Name: PlayerToChruch
+  m_Name: PlayerStart
   m_EditorClassIdentifier: 
   Name: Steve
   Sentences:
-  - Hello Selena !
-  - I got you a flower !
-  - It was a day !
-  - I need to enter the house now ..
+  - '*sigh*'
+  - It's just another day
+  - with nothing but boredom...
+  - 'I should be in school by now '

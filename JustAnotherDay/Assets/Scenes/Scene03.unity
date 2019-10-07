@@ -1345,7 +1345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366926846
 GameObject:
@@ -2945,7 +2945,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canves: {fileID: 26603946}
-  Hearts: {fileID: 0}
   Exclamation: {fileID: 686950441}
   person: {fileID: 11400000, guid: 177891fdb6727b54893d773be07ad8b0, type: 2}
   NameTextDisplay: {fileID: 26603945}
@@ -4088,7 +4087,7 @@ PrefabInstance:
     - target: {fileID: 8135561965841520806, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.68
+      value: 3.217
       objectReference: {fileID: 0}
     - target: {fileID: 8135561965841520806, guid: 22ac08d62f1088c439d6d6c2e18eaa86,
         type: 3}
