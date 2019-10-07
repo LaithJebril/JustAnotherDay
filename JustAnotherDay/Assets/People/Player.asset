@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5d55c35dbda024eaec0b1e666232b3, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  Name: Stive
+  Name: Steve
   Sentences:
-  - i miissed my class
-  - i am going to get back home
+  - '*ugh* I''ve missed my class !'
+  - Gotta get back home..

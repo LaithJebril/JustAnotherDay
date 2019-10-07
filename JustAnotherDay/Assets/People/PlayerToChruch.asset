@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5d55c35dbda024eaec0b1e666232b3, type: 3}
   m_Name: PlayerToChruch
   m_EditorClassIdentifier: 
-  Name: Stive
+  Name: Steve
   Sentences:
-  - I bought those flowers for you
+  - Hello Selena !
+  - I got you a flower !
+  - It was a day !
