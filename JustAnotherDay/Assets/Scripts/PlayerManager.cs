@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [Header("Sprites")]
+    public Sprite[] PlayerSP;
+    SpriteRenderer Player_SPR;
+    Animator animator;
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    public void Animation(int Anim_Index)
+    {
+        if (Anim_Index ==0)
+        {
+            Player_SPR.sprite = PlayerSP[0];
+        }
+        else if (Anim_Index ==1)
+        {
+            Player_SPR.sprite = PlayerSP[1];
+        }
+        else//=3
+        {
+            Player_SPR.sprite = PlayerSP[2];
+        }
+    }
+    public void AnimatioSetActive(bool Active)
+    {
+        animator.enabled = Active;
     }
 }
