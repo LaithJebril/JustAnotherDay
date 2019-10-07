@@ -3,47 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class OldMan : MonoBehaviour
+public class Worker : MonoBehaviour
 {
     public TextMeshProUGUI TextDisplay;
-    [TextArea(2,5)]
+    [TextArea(2, 5)]
     public string Massege;
-    public Transform EndPoint;
     public Rigidbody2D Body;
     Animator animator;
     public float Speed;
     PlayerMovement Player;
-    public float XOffSet;
     bool StartTask;
     bool Nearby;
+    public float Progress;
     void Start()
     {
         Body = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        animator.SetBool("IsWalking", false);
     }
     void Update()
-    { 
+    {
         if (StartTask && Nearby)
         {
-            if (Input.GetKey(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (transform.position.x < EndPoint.position.x)
-                {
-                    animator.SetBool("IsWalking", true);
-                    Body.MovePosition(transform.position + transform.right * Time.fixedDeltaTime * Speed);
-                    Vector3 OffSet = new Vector3(transform.position.x - XOffSet, transform.position.y, transform.position.z);
-                    Player.Move_Right(OffSet);
-                }
-                else
-                {
-                    this.SendMessage("EndTask");
-                }
+                Progress++;
             }
-            else
+            if (Input.GetKeyUp(KeyCode.Space))
             {
-                animator.SetBool("IsWalking", false);
+                Progress++;
             }
         }
     }
