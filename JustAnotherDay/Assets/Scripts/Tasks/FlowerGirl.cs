@@ -5,6 +5,7 @@ using TMPro;
 
 public class FlowerGirl : MonoBehaviour
 {
+    public NextScene nextScene;
     public TextMeshProUGUI TextDisplay;
     [TextArea(2, 5)]
     public string Massege;
@@ -19,7 +20,9 @@ public class FlowerGirl : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                nextScene.CanGoNextScene = true;
                 this.SendMessage("EndTask");
+
             }
         }
     }
